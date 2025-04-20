@@ -89,6 +89,14 @@
     .nav-link:hover::after {
       width: 100%;
     }
+    @media (max-width: 768px) {
+      .nav-link {
+        border-bottom: 1px solid rgba(191, 162, 219, 0.2);
+      }
+      .nav-link:last-child {
+        border-bottom: none;
+      }
+    }
     .glass-card {
       background: rgba(255, 255, 255, 0.7);
       backdrop-filter: blur(12px);
@@ -106,20 +114,20 @@
 <body class="bg-earth text-gray-700 font-sans">
   <div class="lavender-pattern min-h-screen">
     <header class="fixed w-full z-50 bg-white-trans backdrop-blur-lg shadow-soft">
-      <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 relative">
         <a href="#hero" class="text-xl font-serif italic text-lavender-dark hover:text-lavender-medium transition">Lawendowa Sadzawka</a>
-        <button id="menuBtn" aria-label="Menu" class="md:hidden focus:outline-none text-lavender-dark hover:text-lavender transition">
+        <button id="menuBtn" aria-label="Menu" class="md:hidden focus:outline-none text-lavender-dark hover:text-lavender transition z-50">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
-        <nav id="nav" class="absolute top-full right-0 bg-white md:relative md:top-auto md:right-auto md:bg-transparent w-64 md:w-auto hidden md:flex flex-col md:flex-row shadow-soft md:shadow-none rounded-lg md:rounded-none">
-          <a href="#o-nas" class="nav-link py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">O nas</a>
-          <a href="#pola" class="nav-link py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">Pole lawendowe</a>
-          <a href="#staw" class="nav-link py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">Staw</a>
-          <a href="#kawiarnia" class="nav-link py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">Kawiarnia</a>
-          <a href="#atrakcje" class="nav-link py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">Atrakcje</a>
-          <a href="#sklep" class="nav-link py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">Sklep</a>
-          <a href="#sesje" class="nav-link py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">Sesje</a>
-          <a href="#kontakt" class="nav-link py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">Kontakt</a>
+        <nav id="nav" class="absolute top-full right-0 md:relative md:top-auto md:right-auto bg-white md:bg-transparent w-full md:w-auto hidden md:flex flex-col md:flex-row shadow-md md:shadow-none rounded-lg md:rounded-none z-40 mt-2 md:mt-0 mx-auto px-6 py-4 md:py-0 md:px-0">
+          <a href="#o-nas" class="nav-link block w-full md:inline-block md:w-auto py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">O nas</a>
+          <a href="#pola" class="nav-link block w-full md:inline-block md:w-auto py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">Pole lawendowe</a>
+          <a href="#staw" class="nav-link block w-full md:inline-block md:w-auto py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">Staw</a>
+          <a href="#kawiarnia" class="nav-link block w-full md:inline-block md:w-auto py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">Kawiarnia</a>
+          <a href="#atrakcje" class="nav-link block w-full md:inline-block md:w-auto py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">Atrakcje</a>
+          <a href="#sklep" class="nav-link block w-full md:inline-block md:w-auto py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">Sklep</a>
+          <a href="#sesje" class="nav-link block w-full md:inline-block md:w-auto py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">Sesje</a>
+          <a href="#kontakt" class="nav-link block w-full md:inline-block md:w-auto py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">Kontakt</a>
         </nav>
       </div>
     </header>
@@ -156,7 +164,7 @@
             <h2 class="text-3xl font-serif italic text-lavender-dark mb-2">Malownicze pole lawendowe</h2>
             <div class="w-20 h-1 bg-gradient-to-r from-lavender to-leaf-medium rounded-full mb-8"></div>
             <p class="text-lg leading-loose font-light mb-8">Przemierzaj wielobarwne pola lawendy, gdzie fioletowe kwiaty kołyszą się w harmonii z wiatrem. Nasze pole lawendowe to nie tylko miejsce uprawy, ale także przestrzeń dla niezapomnianych sesji fotograficznych w plenerze. Subtelny zapach lawendy tworzy idealne tło dla sesji ślubnych plenerowych, sesji brzuszkowych i innych wyjątkowych momentów.</p>
-            <a href="https://www.facebook.com/LawendowaSadzawka/photos_by" target="_blank" rel="noopener noreferrer" class="text-lavender-dark hover:text-lavender-medium transition-colors underline hover:no-underline">Zobacz nasze plenerowe sesje fotograficzne</a>
+            <a href="https://www.facebook.com/LawendowaSadzawka" target="_blank" rel="noopener noreferrer" class="text-lavender-dark hover:text-lavender-medium transition-colors underline hover:no-underline">Zobacz nasze plenerowe sesje fotograficzne na naszej stronie na Facebook</a>
           </div>
         </div>
       </section>
@@ -396,8 +404,31 @@
     // Mobile menu toggle
     const menuBtn = document.getElementById('menuBtn');
     const nav = document.getElementById('nav');
+    
     menuBtn.addEventListener('click', () => {
       nav.classList.toggle('hidden');
+      document.body.classList.toggle('overflow-hidden');
+    });
+
+    // Close menu when clicking links
+    const navLinks = nav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 768) { // Only on mobile
+          nav.classList.add('hidden');
+          document.body.classList.remove('overflow-hidden');
+        }
+      });
+    });
+
+    // Close menu when resizing to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 768) {
+        nav.classList.remove('hidden');
+        document.body.classList.remove('overflow-hidden');
+      } else {
+        nav.classList.add('hidden');
+      }
     });
 
     // Fade in on scroll
