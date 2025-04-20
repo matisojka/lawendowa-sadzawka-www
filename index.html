@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Lawendowa Sadzawka - Pole lawendowe, produkty lawendowe i sesje zdjęciowe w Biskupicach Zabarycznych</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lawendowa Sadzawka to malownicze pole lawendowe z ogrodem i stawem w Biskupicach Zabarycznych. Oferujemy naturalne produkty lawendowe, wyjątkowe sesje zdjęciowe i relaks wśród kwitnącej lawendy.">
+  <meta name="keywords" content="lawenda, produkty lawendowe, pole lawendowe, sesje zdjęciowe, Biskupice Zabaryczne, ogród, staw">
+  <link rel="canonical" href="https://www.lawendowasadzawka.pl/">
+  <meta property="og:title" content="Lawendowa Sadzawka - Pole lawendowe i produkty lawendowe">
+  <meta property="og:description" content="Odwiedź spokojne pole lawendowe i ogród ze stawem. Kup produkty lawendowe i zorganizuj sesję zdjęciową w Lawendowej Sadzawce.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.lawendowasadzawka.pl/">
+  <meta property="og:image" content="https://www.lawendowasadzawka.pl/og-image.jpg">
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "lavender-lightest": "#F7F4FC",
+            "lavender-light": "#EBE3FA",
+            "lavender": "#BFA2DB",
+            "lavender-medium": "#A78BC3",
+            "lavender-dark": "#8566AA",
+            "lavender-deep": "#6D4E91",
+            "leaf": "#E2EFE8",
+            "leaf-medium": "#CDE2D7",
+            "earth": "#FFFCF8",
+            "white-trans": "rgba(255, 255, 255, 0.85)"
+          },
+          fontFamily: {
+            'sans': ['Montserrat', 'sans-serif'],
+            'serif': ['"Playfair Display"', 'serif']
+          },
+          boxShadow: {
+            'soft': '0 8px 30px rgba(0, 0, 0, 0.05)',
+            'hover': '0 10px 40px rgba(191, 162, 219, 0.2)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      line-height: 1.7;
+      letter-spacing: 0.01em;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .gradient-lavender {
+      background: linear-gradient(135deg, #F7F4FC 0%, #EBE3FA 50%, #E2EFE8 100%);
+    }
+    .gradient-button {
+      background: linear-gradient(120deg, #A78BC3 0%, #8566AA 100%);
+      transition: all 0.3s ease;
+    }
+    .gradient-button:hover {
+      background: linear-gradient(120deg, #BFA2DB 0%, #A78BC3 100%);
+      transform: translateY(-2px);
+    }
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #8566AA;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after {
+      width: 100%;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 32px rgba(191, 162, 219, 0.1);
+    }
+    .lavender-pattern {
+      background-image: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M20 8C22.5 8 25 10.5 25 14C25 17.5 22.5 20 20 20C17.5 20 15 17.5 15 14C15 10.5 17.5 8 20 8Z" fill="%23EBE3FA" fill-opacity="0.4"/></svg>');
+    }
+    .blob-shape {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+  </style>
+</head>
+<body class="bg-earth text-gray-700 font-sans">
+  <div class="lavender-pattern min-h-screen">
+    <header class="fixed w-full z-50 bg-white-trans backdrop-blur-lg shadow-soft">
+      <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+        <a href="#hero" class="text-xl font-serif italic text-lavender-dark hover:text-lavender-medium transition">Lawendowa Sadzawka</a>
+        <button id="menuBtn" aria-label="Menu" class="md:hidden focus:outline-none text-lavender-dark hover:text-lavender transition">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <nav id="nav" class="absolute top-full right-0 bg-white md:relative md:top-auto md:right-auto md:bg-transparent w-64 md:w-auto hidden md:flex flex-col md:flex-row shadow-soft md:shadow-none rounded-lg md:rounded-none">
+          <a href="#o-nas" class="nav-link py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">O nas</a>
+          <a href="#pola" class="nav-link py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">Pola lawendowe</a>
+          <a href="#staw" class="nav-link py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">Staw</a>
+          <a href="#atrakcje" class="nav-link py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">Atrakcje</a>
+          <a href="#sklep" class="nav-link py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">Sklep</a>
+          <a href="#kontakt" class="nav-link py-3 px-6 text-gray-600 hover:text-lavender-dark transition-colors duration-300">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section id="hero" class="h-screen flex items-center justify-center bg-cover bg-center bg-fixed relative overflow-hidden" style="background-image: url('static/images/lav01-field.jpg');">
+        <div class="absolute inset-0 bg-gradient-to-r from-lavender-dark/20 to-leaf/20"></div>
+        <div class="glass-card p-10 rounded-3xl text-center max-w-2xl mx-4 z-10">
+          <h1 class="text-4xl md:text-5xl font-serif text-lavender-dark mb-6 leading-tight">Odkryj spokój <span class="italic">Lawendowej Sadzawki</span></h1>
+          <p class="text-lg md:text-xl mb-8 font-light leading-relaxed text-gray-700">Pole lawendowe, ręcznie robione produkty lawendowe i malownicze sesje zdjęciowe w sercu wsi Biskupice Zabaryczne.</p>
+          <a href="#kontakt" class="gradient-button inline-block text-white font-medium py-3 px-10 rounded-full shadow-soft">Zaplanuj wizytę</a>
+        </div>
+      </section>
+
+      <!-- O nas -->
+      <section id="o-nas" class="py-24 fade-in">
+        <div class="max-w-4xl mx-auto px-6">
+          <h2 class="text-3xl font-serif italic text-lavender-dark mb-2 text-center">O nas</h2>
+          <div class="w-20 h-1 bg-gradient-to-r from-lavender to-leaf-medium rounded-full mx-auto mb-12"></div>
+          <p class="text-lg leading-loose font-light">Lawendowa Sadzawka powstała z miłości do natury i rzemiosła. Nasza plantacja lawendy i ogród nad stawem to przestrzeń, w której możesz zwolnić tempo, odetchnąć i zanurzyć się w kojącym zapachu lawendy. Zapraszamy rodziny, artystów i miłośników przyrody na spotkanie z pięknem i prostotą.</p>
+        </div>
+      </section>
+
+      <!-- Pola lawendowe -->
+      <section id="pola" class="py-24 gradient-lavender fade-in">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+          <div class="relative">
+            <div class="absolute blob-shape -top-6 -left-6 w-24 h-24 bg-lavender-light rounded-full opacity-50"></div>
+            <img src="static/images/lav03-field.jpg" alt="Pole lawendowe" class="rounded-3xl shadow-soft relative z-10 w-full h-auto object-cover">
+            <div class="absolute blob-shape -bottom-6 -right-6 w-32 h-32 bg-leaf rounded-full opacity-60"></div>
+          </div>
+          <div>
+            <h2 class="text-3xl font-serif italic text-lavender-dark mb-2">Pola lawendowe</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-lavender to-leaf-medium rounded-full mb-8"></div>
+            <p class="text-lg leading-loose font-light mb-8">Przemierzaj wielobarwne pola lawendy, gdzie kwiaty kołyszą się w harmonii z wiatrem. Subtelny zapach lawendy tworzy niezapomniane wrażenia dla zmysłów.</p>
+            <a href="#sesje" class="text-lavender-dark hover:text-lavender-medium transition-colors underline hover:no-underline">Zobacz nasze sesje zdjęciowe</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Staw -->
+      <section id="staw" class="py-24 fade-in">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+          <div class="order-2 md:order-1">
+            <h2 class="text-3xl font-serif italic text-lavender-dark mb-2">Spokojny staw</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-lavender to-leaf-medium rounded-full mb-8"></div>
+            <p class="text-lg leading-loose font-light">W centrum posiadłości znajduje się staw, którego wody lśnią w słońcu i odbijają niebo. To idealne miejsce na moment wyciszenia z kubkiem lawendowej herbaty.</p>
+          </div>
+          <div class="relative order-1 md:order-2">
+            <div class="absolute blob-shape -top-6 -right-6 w-24 h-24 bg-lavender-light rounded-full opacity-50"></div>
+            <img src="https://source.unsplash.com/800x600/?pond,calm" alt="Staw w Lawendowej Sadzawce" class="rounded-3xl shadow-soft relative z-10 w-full h-auto object-cover">
+            <div class="absolute blob-shape -bottom-6 -left-6 w-32 h-32 bg-leaf rounded-full opacity-60"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Atrakcje -->
+      <section id="atrakcje" class="py-24 gradient-lavender fade-in">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+          <h2 class="text-3xl font-serif italic text-lavender-dark mb-2 text-center">Atrakcje dla odwiedzających</h2>
+          <div class="w-20 h-1 bg-gradient-to-r from-lavender to-leaf-medium rounded-full mx-auto mb-16"></div>
+          <div class="grid md:grid-cols-3 gap-10">
+            <div class="glass-card p-8 rounded-3xl shadow-soft hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2">
+              <div class="w-24 h-24 mx-auto mb-6 bg-lavender-light rounded-full flex items-center justify-center">
+                <img src="https://source.unsplash.com/200x200/?camera,lavender" alt="Sesje zdjęciowe" class="w-20 h-20 rounded-full object-cover">
+              </div>
+              <h3 class="text-xl font-medium text-lavender-dark mb-4">Sesje zdjęciowe</h3>
+              <p class="font-light">Uwiecznij magiczne chwile w malowniczej scenerii pola lawendowego i stawu.</p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl shadow-soft hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2">
+              <div class="w-24 h-24 mx-auto mb-6 bg-lavender-light rounded-full flex items-center justify-center">
+                <img src="static/images/lav02-bee.jpg" alt="Warsztaty" class="w-20 h-20 rounded-full object-cover">
+              </div>
+              <h3 class="text-xl font-medium text-lavender-dark mb-4">Warsztaty</h3>
+              <p class="font-light">Naucz się tworzyć naturalne produkty lawendowe pod okiem naszych ekspertów.</p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl shadow-soft hover:shadow-hover transition-all duration-300 transform hover:-translate-y-2">
+              <div class="w-24 h-24 mx-auto mb-6 bg-lavender-light rounded-full flex items-center justify-center">
+                <img src="static/images/lav02-bee.jpg" alt="Spacer z przewodnikiem" class="w-20 h-20 rounded-full object-cover">
+              </div>
+              <h3 class="text-xl font-medium text-lavender-dark mb-4">Spacer z przewodnikiem</h3>
+              <p class="font-light">Odkryj ciekawostki o uprawie lawendy, pszczołach i ekologii.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sklep -->
+      <section id="sklep" class="py-24 fade-in">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+          <div class="relative">
+            <div class="absolute blob-shape -top-6 -left-6 w-24 h-24 bg-lavender-light rounded-full opacity-50"></div>
+            <img src="static/images/lav01-field.jpg" alt="Naturalne produkty lawendowe" class="rounded-3xl shadow-soft relative z-10 w-full h-auto object-cover">
+            <div class="absolute blob-shape -bottom-6 -right-6 w-32 h-32 bg-leaf rounded-full opacity-60"></div>
+          </div>
+          <div>
+            <h2 class="text-3xl font-serif italic text-lavender-dark mb-2">Sklep z produktami lawendowymi</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-lavender to-leaf-medium rounded-full mb-8"></div>
+            <p class="text-lg leading-loose font-light mb-8">Zabierz kawałek Lawendowej Sadzawki do domu. W naszej ofercie znajdziesz ręcznie robione mydła, olejki, miody, herbaty i dekoracje z lawendy.</p>
+            <a href="#kontakt" class="gradient-button inline-block text-white font-medium py-3 px-10 rounded-full shadow-soft">Zapytaj o produkty</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sesje zdjęciowe -->
+      <section id="sesje" class="py-24 gradient-lavender fade-in">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+          <h2 class="text-3xl font-serif italic text-lavender-dark mb-2 text-center">Sesje zdjęciowe</h2>
+          <div class="w-20 h-1 bg-gradient-to-r from-lavender to-leaf-medium rounded-full mx-auto mb-8"></div>
+          <p class="text-lg leading-loose font-light mb-10">Lawendowe tło tworzy niepowtarzalne zdjęcia. Organizujemy sesje dla par, rodzin, przyszłych mam i artystów. Skontaktuj się, by zarezerwować termin.</p>
+          <a href="#kontakt" class="gradient-button inline-block text-white font-medium py-3 px-10 rounded-full shadow-soft">Rezerwuj sesję</a>
+        </div>
+      </section>
+
+      <!-- Kontakt -->
+      <section id="kontakt" class="py-24 fade-in">
+        <div class="max-w-4xl mx-auto px-6">
+          <h2 class="text-3xl font-serif italic text-lavender-dark mb-2 text-center">Kontakt</h2>
+          <div class="w-20 h-1 bg-gradient-to-r from-lavender to-leaf-medium rounded-full mx-auto mb-8"></div>
+          <p class="text-lg leading-loose font-light text-center mb-10">Odwiedź nas w Biskupicach Zabarycznych lub napisz, aby dowiedzieć się więcej.</p>
+          <form class="grid gap-8">
+            <div class="grid md:grid-cols-2 gap-8">
+              <input type="text" placeholder="Imię i nazwisko" class="p-4 rounded-xl border border-lavender-light bg-white focus:outline-none focus:ring-2 focus:ring-lavender-medium focus:border-transparent transition">
+              <input type="email" placeholder="Adres e-mail" class="p-4 rounded-xl border border-lavender-light bg-white focus:outline-none focus:ring-2 focus:ring-lavender-medium focus:border-transparent transition">
+            </div>
+            <textarea rows="5" placeholder="Twoja wiadomość" class="p-4 rounded-xl border border-lavender-light bg-white focus:outline-none focus:ring-2 focus:ring-lavender-medium focus:border-transparent transition"></textarea>
+            <button type="submit" class="gradient-button text-white font-medium py-3 px-10 rounded-full shadow-soft w-max mx-auto">Wyślij</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-gradient-to-r from-lavender-dark to-lavender-deep text-white text-center py-8">
+      <p class="font-light">&copy; <span id="year"></span> Lawendowa Sadzawka. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const nav = document.getElementById('nav');
+    menuBtn.addEventListener('click', () => {
+      nav.classList.toggle('hidden');
+    });
+
+    // Fade in on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    faders.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
